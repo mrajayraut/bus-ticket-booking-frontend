@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import api from "../api/api";
 import BookBusTicket from "./BookBusTicket";
+import "../css/SeatSelection.css"
 
 function SeatSelection({selectedBusId ,bookingDate,source,destination}){
     
@@ -37,13 +38,29 @@ function SeatSelection({selectedBusId ,bookingDate,source,destination}){
 
     return(
 
-        <div>
-            <h2>Select Bus</h2>
-            {availableSeats.map((seat)=>(
-                <button key={seat}
-                onClick={()=>setSelectedSeat(seat)}>{seat}
-                </button>
-            ))}
+        <div className="seatSelection-container">
+
+            <h2>Select Bus Seat</h2>
+
+                    <hr />
+                    
+            <div className="seat-list">
+                    
+
+
+                    {availableSeats.map((seat)=>(
+
+                        <div className="seat-card" key={seat}>
+                            
+                        <button key={seat}
+                                onClick={()=>setSelectedSeat(seat)}>{seat}
+                        </button>
+
+
+                        </div>
+                    ))}
+
+            </div>
 
             {selectedSeat>0&&(<BookBusTicket selectedSeat={selectedSeat} selectedBusId={selectedBusId} bookingDate={bookingDate} source={source} destination={destination} />)}
         </div>

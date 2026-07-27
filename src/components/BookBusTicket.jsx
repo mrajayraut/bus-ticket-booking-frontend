@@ -1,5 +1,6 @@
 import { useState } from "react";
 import api from "../api/api";
+import "../css/BookBusTicket.css";
 
 
 function BookBusTicket({selectedSeat,selectedBusId,bookingDate,source,destination}){
@@ -52,21 +53,62 @@ const[Traveller,setTraveller]=useState({
     
 
     return(
-        <div>
-            
-         <input type="text" placeholder="Enter traveller name" name="name"value={Traveller.name} onChange={handleChange}/>
+        <div className="bookBusTicket-container">
 
-         <input type="text"placeholder="Enter age"name="age"value={Traveller.age} onChange={handleChange} />
+            <div className="busTicket-card">
+                    <input type="text" 
+                    placeholder="Enter traveller name" 
+                    name="name"value={Traveller.name} 
+                    onChange={handleChange}/>
 
-         <input type="text" placeholder="Traveller Gender" name="gender" value={Traveller.gender} onChange={handleChange} />
 
-         <p>UserId:-{localStorage.getItem("userId")}</p>
-         <p>Seat No:-{selectedSeat}</p>
-         <p>Booking date :-{bookingDate}</p>
-         <p>Source:-{source}</p>
-         <p>Destination:-{destination}</p>
+                    <input type="text"placeholder="Enter age"
+                    name="age"
+                    value={Traveller.age} 
+                    onChange={handleChange} />
+                    
+                    
+                    
+                     <select name="gender" value={Traveller.gender} onChange={handleChange}>
+                     <option value="">Select Gender</option>
+                     <option value="Male">Male</option>
+                     <option value="Female">Female</option>
+                     <option value="Other">Other</option>
+                      </select>
 
-         <button onClick={seatBooking}>confirm booking</button>
+
+                <div className="booking-details">
+
+                    <div className="detail-row">
+                        <span>User ID</span>
+                        <strong>{localStorage.getItem("userId")}</strong>
+                    </div>
+
+                    <div className="detail-row">
+                        <span>Seat Number</span>
+                        <strong>{selectedSeat}</strong>
+                    </div>
+
+                    <div className="detail-row">
+                        <span>Journey Date</span>
+                        <strong>{bookingDate}</strong>
+                    </div>
+
+                    <div className="detail-row">
+                        <span>From</span>
+                        <strong>{source}</strong>
+                    </div>
+
+                    <div className="detail-row">
+                        <span>To</span>
+                        <strong>{destination}</strong>
+                    </div>
+
+                </div>
+
+                    <button onClick={seatBooking}>confirm booking</button>
+
+            </div>
 
         </div>
     );

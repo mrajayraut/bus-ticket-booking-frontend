@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+.seatSelection-container{
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.15);
+}
+
+.seatSelection-container h2{
+    text-align: center;
+    color: #2563ed;
+    margin-bottom: 25px;
+
+}
+
+.seat-list{
+    display: grid;
+    grid-template-columns: repeat(4,70px);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.seat-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.seat-card button{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background: #22c55e;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:.3s;
+
+
+
+}
+
+.seat-card button:focus{
+
+    background: #2563ed;
+    outline: none;
+}
+
+.seatSelection-container hr{
+    margin: 30px 0;
+}
+

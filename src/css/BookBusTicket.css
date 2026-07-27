@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bookBusTicketContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.busTicket-card{
+    width: 450px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.15);
+
+}
+
+.busTicket-card h2{
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.busTicket-card input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: .3s;
+
+}
+
+.busTicket-card select{
+
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.busTicket-card input:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 6px rgba(37,99,235,0.3);
+}
+
+.booking-info{
+    margin:20px 0;
+    padding:15px;
+    background:#f8fafc;
+    border-radius:10px;
+}
+
+.booking-info p{
+    margin:8px 0;
+    font-size:15px;
+}
+
+.booking-info span{
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.busTicket-card button{
+    width:100%;
+    padding:14px;
+    background:#16a34a;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.busTicket-card button:hover{
+    background:#15803d;
+    transform:scale(1.02);
+}
+
+.booking-details{
+    margin:25px 0;
+    background:#f8fafc;
+    border-radius:10px;
+    padding:18px;
+    border:1px solid #e5e7eb;
+}
+
+.detail-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.detail-row:last-child{
+    border-bottom:none;
+}
+
+.detail-row span{
+    color:#6b7280;
+    font-size:15px;
+}
+
+.detail-row strong{
+    color:black;
+    font-size:16px;
+}

@@ -1,10 +1,16 @@
 import { useState } from "react";
 import api from "../api/api";
 import {jwtDecode}from"jwt-decode";
+import "../css/LoginPage.css"
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function LoginPage(){
  
+
+            const navigate=useNavigate();
+
             const[Login,setLogin]=useState({
                 email:"",
                 password:""
@@ -34,6 +40,7 @@ function LoginPage(){
                     console.log("token",token);
                     console.log("userId",userId);
                     alert("you logged in suceessfully");
+                    navigate("/home");
 
 
                     }catch(error){
@@ -46,25 +53,35 @@ function LoginPage(){
 
                 return(
 
-                    <div>
-                        <form onSubmit={login}>
-                        <input type="email"
-                        name="email"
-                        placeholder="Enter Email"
-                        value={Login.email}
-                        onChange={handleChange}
+                    <div className="login-container">
+                     <div className="login-card">
 
-                        />
+                        <h1>Bus Booking</h1>
+                        <h2>Welcome Back</h2>
+                                <form onSubmit={login}>
+                                <input type="email"
+                                name="email"
+                                placeholder="Enter Email"
+                                value={Login.email}
+                                onChange={handleChange}
 
-                        <input type="text"
-                        name="password"
-                        placeholder="Enter password"
-                        value={Login.password}
-                        onChange={handleChange} />
+                                />
 
-                        <button type="submit">Login</button>
+                                <input type="text"
+                                name="password"
+                                placeholder="Enter password"
+                                value={Login.password}
+                                onChange={handleChange} />
 
-                        </form>
+                                <button type="submit">Login</button>
+
+                                </form>
+
+                                <p>
+                                    don't have an account?
+                                    <Link to="/register"> Register </Link>
+                                </p>
+                        </div>
                     </div>
                 )
 

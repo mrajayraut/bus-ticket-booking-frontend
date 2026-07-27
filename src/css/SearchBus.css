@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.search-container{
+    width: 90%;
+    margin:30px auto;
+
+
+}
+
+.search-card{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-sizing: 0 4px 15px rgba(0,0,0,.15);
+}
+
+.search-card h2{
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+.search-form{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-form input{
+    width: 260px;
+    padding: 14px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f9fafb;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.search-form input:focus{
+    outline: none;
+    border-color: #2563eb;
+
+}
+
+.search-form button{
+    padding: 12px 25px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+
+
+}
+
+.search-form button:hover{
+    background: #1d4ed8;
+
+}
+
+.bus-list{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+}
+
+.bus-card{
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0, 0, .15);
+
+}
+
+.bus-card h3{
+    color: #2563eb;
+    margin-bottom: 15px;
+
+}
+
+.bus-card p{
+    margin-bottom: 10px;
+
+}
+
+.bus-card button{
+
+    width: 100%;
+    padding: 12px;
+    background: #16a34a;
+    color: white;
+    border:none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;    
+}
+
+.bus-card button:hover{
+    background: #15803d;
+}

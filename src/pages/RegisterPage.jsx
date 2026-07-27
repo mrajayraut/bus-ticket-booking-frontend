@@ -1,5 +1,7 @@
 import { use, useState } from "react"
 import api from "../api/api";
+import "../css/RegisterPage.css"
+import { Link } from "react-router-dom";
 
 function RegisterPage(){
 
@@ -18,9 +20,21 @@ function RegisterPage(){
 
         console.log(response.data);
         alert("register successfully");
+
+        setUserRegister({
+            name: "",
+            email: "",
+            password: "",
+            gender: "",
+            contact: ""
+});
        }catch(error){
 
-        console.log(error);
+        if(error.response){
+            console.log(error.response.data);
+        }else{
+            console.log("Somthing went wrong");
+        }
        }
 
         
@@ -40,49 +54,65 @@ function RegisterPage(){
 
     return(
 
-        <div>
-
-            <form onSubmit={register}>
+        <div className="register-container">
 
 
-            <input type="text"
-            name="name"
-            placeholder="Enter name"
-             value={UserRegister.name}
-             onChange={handleChange}/>
+            <div className="register-card">
 
-             <input type="email"
-             name="email"
-             placeholder="Enter Email"
-             value={UserRegister.email}
-             onChange={handleChange} />
+                <h1>Bus Booking</h1>
+                <h2>Create Account</h2>
 
-             <input type="text"
-             name="password"
-             placeholder="Enter password" 
-             value={UserRegister.password}
-             onChange={handleChange}/>
-
-             <input type="text"
-             name="gender"
-             placeholder="Enter gender"
-             value={UserRegister.gender}
-             onChange={handleChange} />
+                <form onSubmit={register}>
 
 
-             <input type="text"
-             name="contact"
-             placeholder="Enter Contact"
-             value={UserRegister.contact}
-             onChange={handleChange} />
+                    <input type="text"
+                    name="name"
+                    placeholder="Enter name"
+                    value={UserRegister.name}
+                    onChange={handleChange}/>
 
-             <button type="submit">Register</button>
+                    <input type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    value={UserRegister.email}
+                    onChange={handleChange} />
+
+                    <input type="password"
+                    name="password"
+                    placeholder="Enter password" 
+                    value={UserRegister.password}
+                    onChange={handleChange}/>
+
+                    <select name="gender" 
+                    value={UserRegister.gender} 
+                    onChange={handleChange}>
+
+                        <option value="">Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+
+                    <input type="text"
+                    name="contact"
+                    placeholder="Enter Contact"
+                    value={UserRegister.contact}
+                    onChange={handleChange} />
+
+                    <button type="submit">Register</button>
 
 
 
 
 
-             </form>
+                </form>
+
+                <p>Already have an account{" "}
+                    <Link to="/">Login</Link>
+                </p>
+            
+            </div>
 
 
 
