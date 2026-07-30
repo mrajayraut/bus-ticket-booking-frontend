@@ -19,7 +19,7 @@ function SeatSelection({selectedBusId ,bookingDate,source,destination}){
 
                     try{
                         console.log(bookingDate);
-                         const response= await api.get(`/Admin/availableSeats/${selectedBusId}?bookingDate=${bookingDate}`);
+                         const response= await api.get(`/User/availableSeats/${selectedBusId}?bookingDate=${bookingDate}`);
                         setAvailableSeats(response.data)
                       }
                 

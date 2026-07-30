@@ -40,7 +40,7 @@ const[Traveller,setTraveller]=useState({
             
             console.log(bookingData);
             
-        const response =await api.post(`/Admin/busBook`,bookingData);
+        const response =await api.post(`/User/busBook`,bookingData);
         console.log(response.data);
         alert("Your seat is booked successfully");
         }catch(error){

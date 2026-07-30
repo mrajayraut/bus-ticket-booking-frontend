@@ -25,7 +25,7 @@ function SearchBus(){
        
 
         const searchBus= async()=>{
-            const response=await api.get(`/Admin/SearchBus?source=${source}&destination=${destination}`);
+            const response=await api.get(`/User/SearchBus?source=${source}&destination=${destination}`);
 
             setBuses(response.data)
 
