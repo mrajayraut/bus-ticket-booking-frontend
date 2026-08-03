@@ -28,7 +28,7 @@ function AddBus(){
     const addBus=async(e)=>{
         e.preventDefault();
         try{
-            const response=await api.post(`/Admin/setBus/?source=${Route.source}&destination=${Route.destination}`,Bus);
+            const response=await api.post(`/User/setBus/?source=${Route.source}&destination=${Route.destination}`,Bus);
            console.log(response.data);
            alert("bus set successfully");
         }catch(error){

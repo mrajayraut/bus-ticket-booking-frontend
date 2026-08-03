@@ -77,6 +77,10 @@ function LoginPage(){
 
                                 </form>
 
+                                <button onClick={() => window.location.href = "http://localhost:8080/oauth2/authorization/google"}>
+                                Continue with Google
+                                </button>
+
                                 <p>
                                     don't have an account?
                                     <Link to="/register"> Register </Link>

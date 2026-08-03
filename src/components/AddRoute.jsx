@@ -13,7 +13,7 @@ function AddRoute(){
     const saveRoute=async(e)=>{
         e.preventDefault();
         try{
-            const reponse=await api.post("/Admin/setRoute",Route);
+            const reponse=await api.post("/User/setRoute",Route);
             console.log(reponse.data);
             alert("Route successfully set");
         }catch(error){
