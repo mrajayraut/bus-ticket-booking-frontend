@@ -1,3 +1,8 @@
+> 🔗 This is the **frontend** for the Bus Ticket Booking System.  
+> Backend repo: [bus-ticket-booking-system](https://github.com/mrajayraut/bus-ticket-booking-system)
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
