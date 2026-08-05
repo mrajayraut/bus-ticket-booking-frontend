@@ -28,14 +28,17 @@ function RegisterPage(){
             gender: "",
             contact: ""
 });
-       }catch(error){
+       }catch (error) {
 
-        if(error.response){
-            console.log(error.response.data);
-        }else{
-            console.log("Somthing went wrong");
-        }
-       }
+    if (error.response) {
+        console.log(error.response.data);
+        alert(error.response.data);   // Show backend message
+    } else {
+        console.log(error);
+        alert("Something went wrong. Please try again.");
+    }
+
+}
 
         
 
