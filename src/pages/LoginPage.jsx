@@ -77,7 +77,12 @@ function LoginPage(){
 
                                 </form>
 
-                                <button onClick={() => window.location.href = "http://localhost:8080/oauth2/authorization/google"}>
+                                <button
+                                onClick={() => {
+                                    window.location.href =
+                                    "https://bus-ticket-booking-system-8cq7.onrender.com/oauth2/authorization/google";
+                                }}
+                                >
                                 Continue with Google
                                 </button>
 
