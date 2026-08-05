@@ -29,15 +29,16 @@ function RegisterPage(){
             contact: ""
 });
        }catch (error) {
+    console.log("Complete Error:", error);
+    console.log("Response:", error.response);
+    console.log("Request:", error.request);
+    console.log("Message:", error.message);
 
     if (error.response) {
-        console.log(error.response.data);
-        alert(error.response.data);   // Show backend message
+        alert(error.response.data);
     } else {
-        console.log(error);
-        alert("Something went wrong. Please try again.");
+        alert(error.message);
     }
-
 }
 
         
